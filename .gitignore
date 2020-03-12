@@ -1,0 +1,8 @@
+dist/
+env.js
+src/config/env.js
+package-lock.json
+# nodejs
+node_modules/
+npm-debug.log
+yarn-error.log
