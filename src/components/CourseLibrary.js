@@ -6,9 +6,12 @@ class CourseLibrary extends Component {
         super(props)
         this.renderCourse = this.renderCourse.bind(this);
     }
+    componentDidMount(){
+        this.props.fetchCourses();
+    }
     renderCourse(course) {
         return (
-        <li key={course.description} className="course">
+        <li key={course.id} className="course">
             <div className="course_info">
                 <div className="course_title-container">
                     <div className="course_title">{course.title}</div>
@@ -21,7 +24,7 @@ class CourseLibrary extends Component {
         return (
             <div>
                 <ul>
-                    {alert(JSON.stringify(this.props.fetchCourses()))}
+                    {/* {alert(JSON.stringify(this.props.fetchCourses()))} */}
                     {this.props.courses.map(this.renderCourse)}
                 </ul>
            </div>
